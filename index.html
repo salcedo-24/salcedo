@@ -1,13 +1,13 @@
-HTML
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Rommel Cyrus Salcedo, BSCS student and aspiring web developer.">
 
-    <title>Personal Portfolio Website</title>
+    <title>Rommel Cyrus Salcedo | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,18 +18,30 @@ HTML
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f0b04a5e61.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <div id="header">
+    <!-- ================= HEADER ================= -->
+    <header id="header">
         <div class="container">
 
+            <!-- NAVIGATION -->
             <nav>
-                <img src="IMAGES/logo.jpg" class="logo" alt="Logo">
+                <!-- PALITAN ANG LOGO DITO -->
+                <img src="IMAGES/logo.jpg" class="logo" alt="Rommel Logo">
 
-                <ul>
+                <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul id="nav-links">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
@@ -41,7 +53,9 @@ HTML
             <section class="hero">
 
                 <div class="hero-image">
-                    <img src="photo/SALCEDO24.jpg" alt="Rommel Cyrus Salcedo">
+                    <!-- PALITAN ANG PROFILE PICTURE DITO -->
+                    <img src="photo/SALCEDO24.jpg"
+                        alt="Rommel Cyrus Salcedo">
                 </div>
 
                 <div class="hero-content">
@@ -63,28 +77,31 @@ HTML
                         and developing projects that improve my skills.
                     </p>
 
-                    <a href="photo/ROMMEL CYRUS CV.pdf" download class="download-btn">
+                    <!-- PALITAN ANG CV FILE DITO -->
+                    <a href="photo/ROMMEL CYRUS CV.pdf"
+                        download
+                        class="download-btn">
+                        <i class="fa-solid fa-download"></i>
                         Download CV
                     </a>
 
                 </div>
-
-        </div>
             </section>
 
         </div>
-    </div>
+    </header>
 
 
-    <!-- ABOUT SECTION -->
-    <div id="about">
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about">
         <div class="container">
 
             <h2>About Me</h2>
 
             <div class="grid-box">
 
-                <div class="box">
+                <div class="box reveal">
+                    <i class="fa-solid fa-user"></i>
                     <h3>Description</h3>
                     <p>
                         This is a personal portfolio website designed
@@ -93,15 +110,18 @@ HTML
                     </p>
                 </div>
 
-                <div class="box">
+                <div class="box reveal">
+                    <i class="fa-solid fa-code"></i>
                     <h3>Technologies Used</h3>
                     <p>
                         HTML and CSS are used to create and design
-                        this personal portfolio website.
+                        this personal portfolio website. JavaScript
+                        adds interactive features and functionality.
                     </p>
                 </div>
 
-                <div class="box">
+                <div class="box reveal">
+                    <i class="fa-solid fa-bullseye"></i>
                     <h3>Purpose</h3>
                     <p>
                         The purpose of this portfolio website is to
@@ -112,19 +132,26 @@ HTML
 
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <!-- PROJECT SECTION -->
-    <div id="project">
+    <!-- ================= PROJECT SECTION ================= -->
+    <section id="project">
         <div class="container">
 
             <h1 class="sub-title">My Projects</h1>
 
             <div class="project-list">
 
-                <div>
+                <!-- PROJECT 1 -->
+                <div class="project-card reveal">
+
                     <i class="fa-solid fa-staff-snake"></i>
+
+                    <!-- OPTIONAL PROJECT IMAGE:
+                    <img src="IMAGES/projects/snake-game.jpg"
+                         alt="Snake Game">
+                    -->
 
                     <h2>Snake Game</h2>
 
@@ -134,14 +161,25 @@ HTML
                         to eat food items.
                     </p>
 
-                    <a href="https://drive.google.com/file/d/1R7w8KnffhOVM6bqxAFZbfM7G8SOMXSFt/view?fbclid=IwY2xjawLITLZleHRuA2FlbQIxMQABHtnCt6-LAEGCh24QHClijL3XCx6-BsgIz8UXx2maiV9sb_XIaZYf3uTN8OvV_aem_MDmmUNqhAl2jQWNcD2V0zQ"
-                        target="_blank" class="view-btn">
+                    <!-- PALITAN ANG PROJECT LINK DITO -->
+                    <a href="https://drive.google.com/file/d/1R7w8KnffhOVM6bqxAFZbfM7G8SOMXSFt/view"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="view-btn">
                         View Project
                     </a>
                 </div>
 
-                <div>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card reveal">
+
                     <i class="fa-solid fa-calculator"></i>
+
+                    <!-- OPTIONAL PROJECT IMAGE:
+                    <img src="IMAGES/projects/calculator.jpg"
+                         alt="Calculator">
+                    -->
 
                     <h2>Calculator</h2>
 
@@ -152,14 +190,25 @@ HTML
                         using Python.
                     </p>
 
-                    <a href="https://drive.google.com/drive/folders/1dk6UDhMEtXBl2y6IKsGG8xO6YR_49Kcu?usp=drive_link"
-                        target="_blank" class="view-btn">
+                    <!-- PALITAN ANG PROJECT LINK DITO -->
+                    <a href="https://drive.google.com/drive/folders/1dk6UDhMEtXBl2y6IKsGG8xO6YR_49Kcu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="view-btn">
                         View Project
                     </a>
                 </div>
 
-                <div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card reveal">
+
                     <i class="fa-solid fa-flask"></i>
+
+                    <!-- OPTIONAL PROJECT IMAGE:
+                    <img src="IMAGES/projects/liquid-button.jpg"
+                         alt="Liquid Fill Button">
+                    -->
 
                     <h2>Liquid Fill Button</h2>
 
@@ -169,19 +218,29 @@ HTML
                         liquid animation effect inside a button.
                     </p>
 
-                    <a href="https://drive.google.com/drive/folders/1ldYG0OfdH8ovV6RV4pduRf0xVBmsD7Z5?usp=drive_link"
-                        target="_blank" class="view-btn">
+                    <!-- PALITAN ANG PROJECT LINK DITO -->
+                    <a href="https://drive.google.com/drive/folders/1ldYG0OfdH8ovV6RV4pduRf0xVBmsD7Z5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="view-btn">
                         View Project
                     </a>
                 </div>
 
+                <!--
+                PARA MAGDAGDAG NG PROJECT:
+                1. Kopyahin ang isang project-card.
+                2. Palitan ang image, title at description.
+                3. Palitan ang project link.
+                -->
+
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <!-- CONTACT SECTION -->
-    <div id="contact">
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact">
         <div class="container">
 
             <div class="row">
@@ -192,25 +251,39 @@ HTML
 
                     <p>
                         <i class="fa-solid fa-paper-plane"></i>
-                        salcedorommelcyrus@gmail.com
+                        <a href="mailto:salcedorommelcyrus@gmail.com">
+                            salcedorommelcyrus@gmail.com
+                        </a>
                     </p>
 
                     <p>
                         <i class="fa-solid fa-phone"></i>
-                        09753484958
+                        <a href="tel:09753484958">
+                            09753484958
+                        </a>
                     </p>
 
                     <div class="icons">
 
-                        <a href="https://www.facebook.com/salcedorommelcyrus" target="_blank">
+                        <!-- SOCIAL MEDIA LINKS -->
+                        <a href="https://www.facebook.com/salcedorommelcyrus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
 
-                        <a href="https://instagram.com/" target="_blank">
+                        <a href="https://instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
 
-                        <a href="https://tiktok.com/" target="_blank">
+                        <a href="https://tiktok.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
 
@@ -219,22 +292,59 @@ HTML
                 </div>
 
 
+                <!-- CONTACT FORM -->
                 <div class="contact-right">
 
-                    <form action="https://formspree.io/f/myeeavjd" method="POST" id="contact-form">
+                    <!-- FORMSPREE ENDPOINT -->
+                    <form action="https://formspree.io/f/mdegnnba"
+                        method="POST"
+                        id="contact-form">
 
-                        <input type="text" name="name"
-                            placeholder="Your Name" required>
+                        <input type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            autocomplete="name"
+                            maxlength="100"
+                            required>
 
-                        <input type="email" name="email"
-                            placeholder="Your Email" required>
+                        <input type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            autocomplete="email"
+                            maxlength="254"
+                            required>
 
-                        <textarea name="message" rows="6"
-                            placeholder="Your Message" required></textarea>
+                        <input type="text"
+                            name="subject"
+                            placeholder="Subject"
+                            maxlength="150"
+                            required>
 
-                        <button type="submit" class="btn btn2">
-                            Submit
+                        <textarea name="message"
+                            rows="6"
+                            placeholder="Your Message"
+                            maxlength="5000"
+                            required></textarea>
+
+                        <!-- HONEYPOT SPAM PROTECTION -->
+                        <input type="text"
+                            name="_gotcha"
+                            tabindex="-1"
+                            autocomplete="off"
+                            class="honeypot"
+                            aria-hidden="true">
+
+                        <button type="submit" class="btn btn2" id="submit-btn">
+                            <span id="button-text">Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
                         </button>
+
+                        <!-- FORM STATUS MESSAGE -->
+                        <p id="form-status"
+                            class="form-status"
+                            role="status"
+                            aria-live="polite">
+                        </p>
 
                     </form>
 
@@ -245,11 +355,14 @@ HTML
 
             <!-- COPYRIGHT -->
             <div class="copyright">
-                <p>Copyright © Rommel Cyrus Salcedo 2026</p>
+                <p>
+                    Copyright © <span id="current-year">2026</span>
+                    Rommel Cyrus Salcedo. All Rights Reserved.
+                </p>
             </div>
 
         </div>
-    </div>
+    </section>
 
 </body>
 </html>
