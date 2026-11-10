@@ -538,3 +538,228 @@ form textarea:focus {
         font-size: 13px;
     }
 }
+
+/* ==========================================
+   JAVASCRIPT FEATURES & IMPROVEMENTS
+========================================== */
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ACTIVE NAVIGATION */
+
+nav ul li a.active-link {
+    color: #ff004f;
+}
+
+nav ul li a.active-link::after {
+    width: 100%;
+}
+
+/* SCROLL REVEAL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PROJECT CARD */
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT FORM STATUS */
+
+.form-status {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    color: #4ade80;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid #4ade80;
+}
+
+.form-status.error {
+    display: block;
+    color: #ff6b6b;
+    background: rgba(255, 0, 79, 0.12);
+    border: 1px solid #ff004f;
+}
+
+/* SUBMIT BUTTON LOADING */
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* HONEYPOT FIELD */
+
+.honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+}
+
+/* CONTACT LINKS */
+
+.contact-left p a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-left p a:hover {
+    color: #ff004f;
+}
+
+/* PROJECT CARD ICON */
+
+.project-card > i {
+    color: #ff004f;
+}
+
+/* ==========================================
+   TABLET AND MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        background: #262626;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        text-align: left;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .reveal {
+        transform: translateY(25px);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+
+    nav ul {
+        width: 200px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .contact-left p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .btn.btn2 {
+        width: 100%;
+    }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
